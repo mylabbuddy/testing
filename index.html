@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lab Buddy | Affordable MRI, CT Scan & Diagnostic Tests in India</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(75, 170, 129, 1.0), rgba(0, 0, 0, 1.0)), url('https://images.unsplash.com/photo-1516549655169-df83a0674c6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-tru-blue {
+            color: #4baa81;
+        }
+        .bg-tru-blue {
+            background-color: #4baa81;
+        }
+        .text-tru-teal {
+            color: #00B0B9;
+        }
+        .bg-tru-teal {
+            background-color: #00B0B9;
+        }
+        .bg-tru-orange {
+            background-color: #F88F23;
+        }
+        .text-tru-orange {
+            color: #F88F23;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.active {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-100 text-gray-600 text-xs py-2 hidden md:block border-b sticky">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-4">
+                <span><i class="fas fa-envelope mr-1"></i><a href="mailto:mylabbuddy000@gmail.com">mylabbuddy000@gmail.com</a></span>
+                <span><i class="fas fa-clock mr-1"></i> Monday to Sunday: 8:00 AM to 8:00 PM</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-600">Doctors</a>
+                <a href="#" class="hover:text-blue-600">Partner with us</a>
+                <a href="#" class="hover:text-blue-600">Corporate</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="https://mylabbuddy.care" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-tru-blue rounded flex items-center justify-center text-white font-bold text-l">MLB</div>
+                        <div>
+                            <span class="text-2xl font-bold text-tru-blue block leading-none">My Lab Buddy</span>
+                            <span class="text-xs text-gray-500 tracking-wider">YOUR CHOICE, YOUR LAB</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 font-medium hover:text-tru-blue transition">Home</a>
+                    <a href="#services" class="text-gray-700 font-medium hover:text-tru-blue transition">Services</a>
+                    <a href="#packages" class="text-gray-700 font-medium hover:text-tru-blue transition">Health Packages</a>
+                    <a href="#locations" class="text-gray-700 font-medium hover:text-tru-blue transition">Locations</a>
+                    
+                    <a href="tel:+919870223974" class="bg-white border-2 border-tru-blue text-tru-blue px-4 py-2 rounded-full font-bold hover:bg-tru-blue hover:text-tru-blue transition flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-tru-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#" class="block text-gray-700 font-medium hover:text-tru-blue">Home</a>
+                <a href="#services" class="block text-gray-700 font-medium hover:text-tru-blue">Services</a>
+                <a href="#packages" class="block text-gray-700 font-medium hover:text-tru-blue">Health Packages</a>
+                <a href="#locations" class="block text-gray-700 font-medium hover:text-tru-blue">Locations</a>
+                <a href="tel:+919870223974" class="block text-center bg-tru-blue text-white py-2 rounded-lg font-bold">
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 md:py-24 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                
+                <!-- Hero Text -->
+                <div class="md:w-1/2 text-white mb-10 md:mb-0">
+                    <span class="bg-tru-orange text-white text-lg font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block" style="background-color: red;">Special Offer</span>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                        Affordable Pathology and Radiology Tests<br> <span class="text-yellow-400">Flat 50% OFF</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-lg">
+                        Book priority slots at NABL accredited labs near you. Best prices guaranteed for MRI, CT Scan, Ultrasound, and Blood Tests.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <!-- <button onclick="openModal()" class="bg-tru-teal hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-calendar-check mr-2"></i> Book Appointment
+                        </button> -->
+                        <a href="https://wa.me/918448879897" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Book Your Blood Tests on WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center gap-6 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i> Report Accuracy
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i> Best Price
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i> Priority Support
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Form -->
+                <div class="md:w-1/2 md:pl-10 w-full">
+                    <div class="bg-white p-6 rounded-xl shadow-2xl max-w-md mx-auto">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Get a Call Back</h3>
+                        <p class="text-gray-500 text-sm mb-4">Fill the form to get the best discounted prices.</p>
+                        
+                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-1">Name</label>
+                                <input type="text" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-1">Mobile Number</label>
+                                <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                            </div>
+                            <!-- <div>
+                                <label class="block text-gray-700 text-sm font-bold mb-1">Select Test</label>
+                                <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue">
+                                    <option>MRI Scan</option>
+                                    <option>CT Scan</option>
+                                    <option>Ultrasound</option>
+                                    <option>PET CT Scan</option>
+                                    <option>Blood Test</option>
+                                    <option>Others</option>
+                                </select>
+                            </div> -->
+                            <button type="submit" class="w-full bg-tru-blue text-white font-bold py-3 rounded-lg hover:bg-blue-900 transition duration-300">
+                                Request Call Back
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-10 shadow-sm relative z-10 -mt-8 mx-4 md:mx-auto md:max-w-5xl rounded-lg border border-gray-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-gray-100">
+            <div>
+                <div class="text-3xl font-bold text-tru-blue">2 Cr+</div>
+                <div class="text-gray-500 text-sm mt-1">Happy Users</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-tru-blue">750+</div>
+                <div class="text-gray-500 text-sm mt-1">Scan Centers</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-tru-blue">450+</div>
+                <div class="text-gray-500 text-sm mt-1">Daily Scans</div>
+            </div>
+            <div>
+                <div class="text-3xl font-bold text-tru-blue">50+</div>
+                <div class="text-gray-500 text-sm mt-1">Cities Covered</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Diagnostic Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide a comprehensive range of high-quality diagnostic services with the latest technology.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                         <img src="https://images.unsplash.com/photo-1516549655169-df83a0674c6c?auto=format&fit=crop&q=80&w=400" alt="MRI Scan" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-magnet text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">MRI Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">High quality 1.5T and 3T MRI scans at affordable rates.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=400" alt="CT Scan" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-ring text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Advanced multi-slice CT scans for accurate diagnosis.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=400" alt="Ultrasound" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-baby text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ultrasound</h3>
+                        <p class="text-gray-500 text-sm mb-4">3D/4D Ultrasounds, Color Doppler and more.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 8 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 9 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 10 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 11 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Service 12 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden group">
+                    <div class="h-40 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400" alt="PET CT" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto -mt-12 mb-4 border-4 border-white shadow-sm relative z-10">
+                            <i class="fas fa-radiation text-tru-blue text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PET CT Scan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Whole body PET CT for precise cancer detection.</p>
+                        <a href="#" class="text-tru-teal font-bold text-sm hover:underline">Book Now <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doctor" class="rounded-lg shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Choose My Lab Buddy?</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-tru-blue">
+                                    <i class="fas fa-tags text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">Best Price Guaranteed</h3>
+                                <p class="text-gray-600 mt-1">If you find a lower price for the same test in your area, we will match it.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-tru-blue">
+                                    <i class="fas fa-flask text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">NABL Approved Labs</h3>
+                                <p class="text-gray-600 mt-1">We only partner with government certified and NABL accredited laboratories.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-tru-blue">
+                                    <i class="fas fa-file-medical-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-gray-800">100% Accurate Reports</h3>
+                                <p class="text-gray-600 mt-1">High-quality machines and expert radiologists ensure precision in every report.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section id="locations" class="py-16 bg-tru-blue text-white" style="background-color: black;">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Presence in Delhi</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North East Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North West Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Central Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Shahdara</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South East Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South West Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">East Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">West Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">New Delhi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">What Our Patients Say</h2>
+            <div class="flex justify-center mb-10">
+                <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="ml-2 text-gray-600 font-medium">4.9/5 Rating</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">P</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-gray-800">Prof. Prakash</h4>
+                            <p class="text-xs text-gray-500">Booked MRI Scan</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"With My Lab Buddy Support, One of the best experience ever with highly trained staff who come to my house take the sample and provided the report on time"</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">A</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-gray-800">Anand Singh</h4>
+                            <p class="text-xs text-gray-500">Booked MRI Scan</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"Cost effective for MRI, XRAY. I compared prices with multiple labs but they are the best. I recommend others for any scanning requirement."</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">P</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-gray-800">Prakash Raut</h4>
+                            <p class="text-xs text-gray-500">Booked MRI Scan</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"True Reports team was fantastic. The MRI which could have costed me 10500 they got this done just at half the price... swift response great service."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                        Do I need to pay in advance to book?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">No, you don't need to pay in advance. You can pay directly at the diagnostic centre through UPI, cash, or card.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                        How are you able to offer discounts?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">True Report is a direct-to-customer platform. We have special tie-ups with partner diagnostic centres and pass these negotiated rates directly to you.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-lg p-4 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-gray-800 list-none">
+                        What does "Best Price Guaranteed" mean?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm">If you find a lower price for the same scan at another centre in the same area, we will match it to ensure you get the best deal.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-tru-blue font-bold text-sm">MLB</div>
+                        <span class="text-xl font-bold text-white">My Lab Buddy</span>
+                    </div>
+                    <p class="text-sm mb-4">India's trusted platform for affordable diagnostic tests. We connect you with top NABL labs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">About MLB</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="tel:8448879897" class="hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">PATHOLOGY</a></li>
+                        <li><a href="#" class="hover:text-white transition">RADIOLOGY</a></li>
+                        <li><a href="#" class="hover:text-white transition">CARDIOLOGY</a></li>
+                        <li><a href="#" class="hover:text-white transition">HEALTH PACKAGES</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-2 text-tru-teal"></i> <span>622A/5A, Govindpuri, Kalkaji, New Delhi, Delhi-110019</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2 text-tru-teal"></i> <a href="tel:+918448879897">+91 8448879897</a></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-tru-teal"></i><a href="mailto:mylabbuddy000@gmail.com">mylabbuddy000@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>Disclaimer: MyLabBuddy.care is a booking platform. We do not create medical reports; services are managed by respective diagnostic centres.</p>
+                <p class="mt-2">&copy; 2025 My Lab Buddy (MLB). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Floating Action Button (Mobile) -->
+    <div class="md:hidden fixed bottom-0 w-full z-50 flex">
+        <a href="tel:+918448879897" class="w-1/2 bg-tru-blue text-white py-3 text-center font-bold flex items-center justify-center border-r border-blue-800" style="background-color: red;">
+            <i class="fas fa-phone-alt mr-2"></i> Call Now
+        </a>
+        <a href="https://wa.me/918448879897" class="w-1/2 bg-green-500 text-white py-3 text-center font-bold flex items-center justify-center">
+            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Booking Modal (Hidden by default) -->
+    <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full relative p-6 animate-fade-in-up">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Book Appointment</h3>
+                <p class="text-sm text-green-600 font-medium">Get Flat 50% Off on Online Booking</p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                <input type="tel" placeholder="Phone Number" class="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                <select class="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-tru-blue">
+                    <option>Select Service</option>
+                    <option>MRI Scan</option>
+                    <option>CT Scan</option>
+                    <option>Ultrasound</option>
+                    <option>Blood Test</option>
+                </select>
+                <button type="submit" class="w-full bg-tru-orange text-white font-bold py-3 rounded hover:bg-orange-600 transition">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+            } else {
+                menu.style.maxHeight = "0";
+            }
+        });
+
+        // Modal Logic
+        function openModal() {
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Our health expert will call you shortly to confirm your booking.');
+            closeModal();
+        }
+    </script>
+</body>
+</html>
