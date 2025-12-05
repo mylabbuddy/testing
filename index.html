@@ -26,7 +26,8 @@
         .text-tru-blue {
             color: #4baa81;
         }
-        .bg-tru-blue {
+        .bg-tru-blue { background-color: #003B5C; }
+        .bg-tru-green {
             background-color: #4baa81;
         }
         .text-tru-teal {
@@ -56,7 +57,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-200">
 
     <!-- Top Bar -->
     <div class="bg-gray-100 text-gray-600 text-xs py-2 hidden md:block border-b sticky">
@@ -80,9 +81,9 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="https://mylabbuddy.care" class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-tru-blue rounded flex items-center justify-center text-white font-bold text-l">MLB</div>
+                        <div class="w-10 h-10 bg-tru-blue rounded flex items-center justify-center text-white font-bold text-lg">MLB</div>
                         <div>
-                            <span class="text-2xl font-bold text-tru-blue block leading-none">My Lab Buddy</span>
+                            <span class="text-lg font-bold text-tru-blue block leading-none">My Lab Buddy</span>
                             <span class="text-xs text-gray-500 tracking-wider">YOUR CHOICE, YOUR LAB</span>
                         </div>
                     </a>
@@ -116,12 +117,30 @@
                 <a href="#services" class="block text-gray-700 font-medium hover:text-tru-blue">Services</a>
                 <a href="#packages" class="block text-gray-700 font-medium hover:text-tru-blue">Health Packages</a>
                 <a href="#locations" class="block text-gray-700 font-medium hover:text-tru-blue">Locations</a>
-                <a href="tel:+919870223974" class="block text-center bg-tru-blue text-white py-2 rounded-lg font-bold">
-                    Call Now
-                </a>
+                <a href="tel:+918448879897" class="block text-center bg-tru-blue text-white py-2 rounded-lg font-bold">Call Now</a>
             </div>
         </div>
     </nav>
+    <div class="bg-tru-blue py-6 relative z-40 border-t border-blue-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto relative">
+                <div class="relative">
+                    <input type="text" id="testSearchInput" placeholder="Search for tests (e.g., CBC, MRI Brain, Thyroid Profile)..." 
+                        class="w-full p-4 pl-12 rounded-lg shadow-lg text-gray-800 focus:outline-none focus:ring-4 focus:ring-tru-teal/50 transition font-medium"
+                        autocomplete="off">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl"></i>
+                    <button id="clearSearch" class="hidden absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- Search Results Dropdown -->
+                <div id="searchResults" class="absolute left-0 right-0 top-full mt-2 bg-white rounded-lg shadow-2xl overflow-hidden hidden max-h-96 overflow-y-auto">
+                    <!-- Results injected here via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-bg py-16 md:py-24 relative">
@@ -458,21 +477,21 @@
     <!-- Cities Section -->
     <section id="locations" class="py-16 bg-tru-blue text-white" style="background-color: black;">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">Our Presence in Delhi</h2>
+            <h2 class="text-3xl font-bold text-center mb-10">Our Presence in Delhi NCR</h2>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 text-center">
                 <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North East Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">North West Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Central Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Shahdara</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Ghaziabad</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Gurugram</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Faridabad</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Noida</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">Greater Noida</a>
+                <!-- <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South Delhi</a>
                 <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South East Delhi</a>
                 <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">South West Delhi</a>
                 <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">East Delhi</a>
                 <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">West Delhi</a>
-                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">New Delhi</a>
+                <a href="#" class="block bg-white/10 hover:bg-white/20 py-3 rounded-lg transition">New Delhi</a> -->
             </div>
         </div>
     </section>
@@ -575,11 +594,19 @@
                         <span class="text-xl font-bold text-white">My Lab Buddy</span>
                     </div>
                     <p class="text-sm mb-4">India's trusted platform for affordable diagnostic tests. We connect you with top NABL labs.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="#" class="hover:text-white transition" style="color: #1877F2;">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition" style="color: #1877F2;">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -602,7 +629,6 @@
                         <li><a href="#" class="hover:text-white transition">HEALTH PACKAGES</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-white font-bold mb-4">Contact Us</h4>
                     <ul class="space-y-2 text-sm">
@@ -611,10 +637,16 @@
                         <li class="flex items-center"><i class="fas fa-envelope mr-2 text-tru-teal"></i><a href="mailto:mylabbuddy000@gmail.com">mylabbuddy000@gmail.com</a></li>
                     </ul>
                 </div>
+                
             </div>
-            
+            <div class="border-t border-gray-800 pt-8 text-lg">
+                <h4 class="text-white font-bold mb-4">Disclaimer</h4>
+                <p><a href="https://mylabbuddy.care" style="color: #4baa81;">MyLabBuddy.care</a> is an online booking platform that connects patients with nearby diagnostic centres. We do not create, manage, or validate the medical reports. All reports, tests, and services are solely undertaken and managed by the respective diagnostic centres.</p>
+                <br>
+            </div>
             <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                <p>Disclaimer: MyLabBuddy.care is a booking platform. We do not create medical reports; services are managed by respective diagnostic centres.</p>
+                <!-- <p>MyLabBuddy.care is an online booking platform that connects patients with nearby diagnostic centres. We do not create, manage, or validate the medical reports. All reports, tests, and services are solely undertaken and managed by the respective diagnostic centres.</p>
+                 -->
                 <p class="mt-2">&copy; 2025 My Lab Buddy (MLB). All Rights Reserved.</p>
             </div>
         </div>
@@ -656,6 +688,61 @@
             </form>
         </div>
     </div>
+    <div id="testDetailModal" class="fixed inset-0 bg-black bg-opacity-60 z-[60] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full relative overflow-hidden animate-fade-in-up">
+            <!-- Header -->
+            <div class="bg-tru-blue p-6 text-white relative">
+                <h3 id="modalTestName" class="text-2xl font-bold pr-8">Test Name</h3>
+                <button onclick="closeTestModal()" class="absolute top-4 right-4 text-white/80 hover:text-white transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <span class="text-gray-500 text-sm font-medium">Discounted Price</span>
+                        <div class="text-3xl font-bold text-tru-blue" id="modalTestPrice">₹0</div>
+                    </div>
+                    <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold border border-green-200">
+                        50% OFF
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <div class="bg-blue-50 p-2 rounded-lg text-tru-teal mr-3 mt-1">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-700 text-sm">Description</p>
+                            <p class="text-gray-600 text-sm leading-relaxed" id="modalTestDesc">Description here...</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                         <div class="bg-blue-50 p-2 rounded-lg text-tru-teal mr-3">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium text-sm">Reports in 24-48 Hours</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-blue-50 p-2 rounded-lg text-tru-teal mr-3">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium text-sm">Home Collection Available</span>
+                    </div>
+                </div>
+
+                <!-- Action -->
+                <a id="modalBookBtn" href="#" target="_blank" class="block w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 rounded-xl text-center shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Book on WhatsApp</span>
+                </a>
+                <p class="text-center text-xs text-gray-400 mt-3">Instant confirmation • No prepayment required</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -694,6 +781,228 @@
             alert('Thank you! Our health expert will call you shortly to confirm your booking.');
             closeModal();
         }
+    </script>
+    <script>
+        // --- DATA: 100 Lab Tests (JSON Structure) ---
+        const labTests = [
+            { id: 1, name: "Complete Blood Count (CBC)", price: 299, desc: "Evaluates overall health and detects a wide range of disorders, including anemia, infection and leukemia." },
+            { id: 2, name: "MRI Brain", price: 2999, desc: "Non-invasive imaging test that produces detailed images of your brain and brain stem." },
+            { id: 3, name: "CT Scan Head", price: 1499, desc: "Uses X-rays to create pictures of the head, including the skull, brain, eye sockets, and sinuses." },
+            { id: 4, name: "Thyroid Profile (T3, T4, TSH)", price: 499, desc: "Checks how well your thyroid is working." },
+            { id: 5, name: "Liver Function Test (LFT)", price: 599, desc: "Helps determine the health of your liver by measuring the levels of proteins, liver enzymes, and bilirubin." },
+            { id: 6, name: "Kidney Function Test (KFT)", price: 599, desc: "Tests how well your kidneys are working." },
+            { id: 7, name: "Lipid Profile", price: 599, desc: "Measures the amount of cholesterol and triglycerides in your blood." },
+            { id: 8, name: "Blood Sugar Fasting", price: 99, desc: "Measures blood glucose after at least 8 hours of fasting." },
+            { id: 9, name: "HbA1c", price: 399, desc: "Average blood sugar level over the past 2 to 3 months." },
+            { id: 10, name: "Vitamin D Total", price: 899, desc: "Screening for Vitamin D deficiency." },
+            { id: 11, name: "Vitamin B12", price: 699, desc: "Measures the amount of vitamin B12 in your blood." },
+            { id: 12, name: "Ultrasound Whole Abdomen", price: 999, desc: "Imaging test to examine organs in the abdomen." },
+            { id: 13, name: "X-Ray Chest PA View", price: 399, desc: "Produces images of the heart, lungs, airways, blood vessels and the bones of the spine and chest." },
+            { id: 14, name: "Dengue NS1 Antigen", price: 599, desc: "Early detection of Dengue virus." },
+            { id: 15, name: "Typhoid Widal", price: 299, desc: "Detects typhoid fever." },
+            { id: 16, name: "Urine Routine & Microscopy", price: 199, desc: "Checks for signs of common health conditions in urine." },
+            { id: 17, name: "MRI Lumbar Spine", price: 3499, desc: "Imaging of the lower back." },
+            { id: 18, name: "MRI Cervical Spine", price: 3499, desc: "Imaging of the neck area." },
+            { id: 19, name: "CT Scan Chest HRCT", price: 2999, desc: "High-resolution CT of the lungs." },
+            { id: 20, name: "ECG", price: 299, desc: "Records the electrical signal from your heart." },
+            { id: 21, name: "Echocardiography (ECHO)", price: 1999, desc: "Ultrasound of the heart." },
+            { id: 22, name: "TMT (Treadmill Test)", price: 1499, desc: "Stress test for the heart." },
+            { id: 23, name: "Holter Monitoring", price: 2499, desc: "Records heart rhythm for 24 hours." },
+            { id: 24, name: "EEG", price: 1999, desc: "Records brain wave activity." },
+            { id: 25, name: "NCV (Nerve Conduction Velocity)", price: 1999, desc: "Measures how fast an electrical impulse moves through your nerve." },
+            { id: 26, name: "Mammography", price: 1499, desc: "X-ray picture of the breast to screen for cancer." },
+            { id: 27, name: "DEXA Scan (Bone Density)", price: 1999, desc: "Measures bone mineral density." },
+            { id: 28, name: "PET CT Whole Body", price: 9999, desc: "Uses radioactive substances to visualize and measure metabolic processes in the body." },
+            { id: 29, name: "Serum Ferritin", price: 499, desc: "Measures the amount of ferritin in your blood." },
+            { id: 30, name: "Iron Studies", price: 799, desc: "Checks iron levels in the blood." },
+            { id: 31, name: "Folic Acid", price: 699, desc: "Measures the amount of folic acid in the blood." },
+            { id: 32, name: "Calcium Total", price: 199, desc: "Measures calcium levels in the blood." },
+            { id: 33, name: "Uric Acid", price: 199, desc: "Measures uric acid to detect gout." },
+            { id: 34, name: "ESR", price: 99, desc: "Erythrocyte Sedimentation Rate, a marker for inflammation." },
+            { id: 35, name: "CRP (C-Reactive Protein)", price: 399, desc: "Marker for inflammation in the body." },
+            { id: 36, name: "Rheumatoid Factor (RA)", price: 499, desc: "Screening for rheumatoid arthritis." },
+            { id: 37, name: "Anti CCP", price: 1299, desc: "Specific test for rheumatoid arthritis." },
+            { id: 38, name: "ANA Profile", price: 1499, desc: "Antinuclear Antibody test for autoimmune disorders." },
+            { id: 39, name: "Allergy Profile", price: 2499, desc: "Comprehensive test for various allergies." },
+            { id: 40, name: "Double Marker", price: 1999, desc: "Prenatal screening test." },
+            { id: 41, name: "Triple Marker", price: 2499, desc: "Prenatal screening test." },
+            { id: 42, name: "Quadruple Marker", price: 2999, desc: "Prenatal screening test." },
+            { id: 43, name: "NIPT", price: 11999, desc: "Non-Invasive Prenatal Testing." },
+            { id: 44, name: "Karyotyping", price: 3999, desc: "Examines blood chromosomes." },
+            { id: 45, name: "Semen Analysis", price: 399, desc: "Evaluates sperm health." },
+            { id: 46, name: "Pap Smear", price: 499, desc: "Screening for cervical cancer." },
+            { id: 47, name: "CA-125", price: 999, desc: "Tumor marker for ovarian cancer." },
+            { id: 48, name: "PSA Total", price: 699, desc: "Prostate-Specific Antigen test." },
+            { id: 49, name: "CEA", price: 799, desc: "Carcinoembryonic Antigen tumor marker." },
+            { id: 50, name: "AFP", price: 799, desc: "Alpha-Fetoprotein tumor marker." },
+            { id: 51, name: "Beta HCG", price: 599, desc: "Pregnancy hormone test." },
+            { id: 52, name: "Prolactin", price: 499, desc: "Hormone test." },
+            { id: 53, name: "FSH", price: 499, desc: "Follicle Stimulating Hormone." },
+            { id: 54, name: "LH", price: 499, desc: "Luteinizing Hormone." },
+            { id: 55, name: "Testosterone Total", price: 599, desc: "Male hormone test." },
+            { id: 56, name: "Cortisol", price: 599, desc: "Stress hormone test." },
+            { id: 57, name: "Insulin Fasting", price: 599, desc: "Measures insulin levels." },
+            { id: 58, name: "C-Peptide", price: 799, desc: "Evaluates insulin production." },
+            { id: 59, name: "Magnesium", price: 299, desc: "Measures magnesium levels." },
+            { id: 60, name: "Phosphorus", price: 199, desc: "Measures phosphorus levels." },
+            { id: 61, name: "Sodium", price: 199, desc: "Electrolyte test." },
+            { id: 62, name: "Potassium", price: 199, desc: "Electrolyte test." },
+            { id: 63, name: "Chloride", price: 199, desc: "Electrolyte test." },
+            { id: 64, name: "Amylase", price: 499, desc: "Pancreatic enzyme test." },
+            { id: 65, name: "Lipase", price: 499, desc: "Pancreatic enzyme test." },
+            { id: 66, name: "SGOT (AST)", price: 199, desc: "Liver enzyme test." },
+            { id: 67, name: "SGPT (ALT)", price: 199, desc: "Liver enzyme test." },
+            { id: 68, name: "Alkaline Phosphatase", price: 199, desc: "Liver and bone test." },
+            { id: 69, name: "Bilirubin Total", price: 149, desc: "Liver function test." },
+            { id: 70, name: "Protein Total", price: 149, desc: "Measures total protein in blood." },
+            { id: 71, name: "Albumin", price: 149, desc: "Liver and kidney test." },
+            { id: 72, name: "Globulin", price: 149, desc: "Protein test." },
+            { id: 73, name: "Hepatitis B (HBsAg)", price: 399, desc: "Screening for Hepatitis B." },
+            { id: 74, name: "Hepatitis C (HCV)", price: 499, desc: "Screening for Hepatitis C." },
+            { id: 75, name: "HIV 1 & 2", price: 499, desc: "Screening for HIV." },
+            { id: 76, name: "VDRL", price: 199, desc: "Screening for Syphilis." },
+            { id: 77, name: "Blood Group", price: 99, desc: "Determines blood type." },
+            { id: 78, name: "Bleeding Time (BT)", price: 99, desc: "Clotting test." },
+            { id: 79, name: "Clotting Time (CT)", price: 99, desc: "Clotting test." },
+            { id: 80, name: "PT/INR", price: 399, desc: "Monitors blood thinning medication." },
+            { id: 81, name: "APTT", price: 399, desc: "Clotting test." },
+            { id: 82, name: "D-Dimer", price: 899, desc: "Tests for blood clots." },
+            { id: 83, name: "Fibrinogen", price: 599, desc: "Clotting protein test." },
+            { id: 84, name: "Color Doppler Pregnancy", price: 1499, desc: "Checks blood flow in fetus." },
+            { id: 85, name: "Color Doppler Carotid", price: 1999, desc: "Checks blood flow in neck arteries." },
+            { id: 86, name: "Color Doppler Renal", price: 1999, desc: "Checks blood flow to kidneys." },
+            { id: 87, name: "Color Doppler Limbs (One Limb)", price: 1999, desc: "Checks blood flow in arms or legs." },
+            { id: 88, name: "CT Angiography Brain", price: 4999, desc: "Visualizes blood vessels in brain." },
+            { id: 89, name: "CT Angiography Coronary", price: 5999, desc: "Visualizes heart arteries." },
+            { id: 90, name: "MRI Knee Joint", price: 3499, desc: "Imaging of the knee." },
+            { id: 91, name: "MRI Shoulder Joint", price: 3499, desc: "Imaging of the shoulder." },
+            { id: 92, name: "MRI Hip Joint", price: 3499, desc: "Imaging of the hip." },
+            { id: 93, name: "MRCP", price: 4499, desc: "MRI of the bile ducts." },
+            { id: 94, name: "HSG", price: 2499, desc: "Hysterosalpingography for infertility." },
+            { id: 95, name: "IVP", price: 1999, desc: "Intravenous Pyelogram for kidneys." },
+            { id: 96, name: "Barium Meal", price: 1999, desc: "X-ray of the stomach." },
+            { id: 97, name: "Barium Swallow", price: 1499, desc: "X-ray of the esophagus." },
+            { id: 98, name: "Uroflowmetry", price: 499, desc: "Measures urine flow." },
+            { id: 99, name: "Spirometry (PFT)", price: 499, desc: "Lung function test." },
+            { id: 100, name: "COVID-19 RT-PCR", price: 499, desc: "Test for Coronavirus." },
+            { id: 101, name: "Stool Routine", price: 149, desc: "Analysis of stool sample." },
+            { id: 102, name: "Stool Culture", price: 499, desc: "Checks for bacteria in stool." }
+        ];
+
+        // --- SEARCH LOGIC ---
+        const searchInput = document.getElementById('testSearchInput');
+        const resultsContainer = document.getElementById('searchResults');
+        const clearBtn = document.getElementById('clearSearch');
+
+        function handleSearch(query) {
+            query = query.toLowerCase().trim();
+            resultsContainer.innerHTML = ''; // Clear previous results
+
+            if (query.length === 0) {
+                resultsContainer.classList.add('hidden');
+                clearBtn.classList.add('hidden');
+                return;
+            }
+
+            clearBtn.classList.remove('hidden');
+
+            // Filter logic
+            const filteredTests = labTests.filter(test => 
+                test.name.toLowerCase().includes(query) || 
+                test.desc.toLowerCase().includes(query)
+            );
+
+            if (filteredTests.length === 0) {
+                resultsContainer.classList.remove('hidden');
+                resultsContainer.innerHTML = `
+                    <div class="p-4 text-center text-gray-500">
+                        <i class="far fa-frown text-2xl mb-2 block"></i>
+                        No tests found matching "${query}"
+                    </div>
+                `;
+                return;
+            }
+
+            // Render Results
+            resultsContainer.classList.remove('hidden');
+            const list = document.createElement('ul');
+            list.className = "divide-y divide-gray-100";
+
+            filteredTests.forEach(test => {
+                const li = document.createElement('li');
+                li.className = "p-4 hover:bg-gray-50 transition flex justify-between items-center group cursor-pointer";
+                li.onclick = (e) => {
+                    // Prevent firing if button clicked (though button stops prop, good practice)
+                    if(e.target.tagName !== 'BUTTON') showTestDetails(test.id);
+                };
+
+                li.innerHTML = `
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-800 text-sm group-hover:text-tru-blue transition">${test.name}</h4>
+                        <p class="text-xs text-gray-500 truncate max-w-xs">${test.desc}</p>
+                    </div>
+                    <div class="text-right flex items-center gap-3">
+                        <div>
+                            <span class="block text-xs text-gray-400 line-through">₹${test.price * 2}</span>
+                            <span class="block font-bold text-tru-teal">₹${test.price}</span>
+                        </div>
+                        <button onclick="event.stopPropagation(); showTestDetails(${test.id})" class="bg-tru-blue text-white text-xs font-bold px-3 py-2 rounded shadow hover:bg-blue-800 transition">
+                            View
+                        </button>
+                    </div>
+                `;
+                list.appendChild(li);
+            });
+            resultsContainer.appendChild(list);
+        }
+
+        // Event Listeners for Search
+        searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
+        
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            handleSearch('');
+            searchInput.focus();
+        });
+
+        // Close search when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+                resultsContainer.classList.add('hidden');
+            }
+        });
+
+        // --- TEST DETAIL POPUP LOGIC ---
+        const detailModal = document.getElementById('testDetailModal');
+
+        function showTestDetails(id) {
+            const test = labTests.find(t => t.id === id);
+            if (!test) return;
+
+            // Populate Modal
+            document.getElementById('modalTestName').textContent = test.name;
+            document.getElementById('modalTestPrice').textContent = `₹${test.price}`;
+            document.getElementById('modalTestDesc').textContent = test.desc;
+
+            // WhatsApp Button Logic
+            const phone = "918448879897";
+            const message = encodeURIComponent(`Hello, I want to book an appointment for ${test.name}. Please provide details.`);
+            document.getElementById('modalBookBtn').href = `https://wa.me/${phone}?text=${message}`;
+
+            // Show Modal
+            detailModal.classList.remove('hidden');
+            // Hide Search Results
+            resultsContainer.classList.add('hidden');
+        }
+
+        function closeTestModal() {
+            detailModal.classList.add('hidden');
+        }
+
+        // Close test modal on outside click
+        detailModal.onclick = (e) => {
+            if (e.target === detailModal) closeTestModal();
+        };
     </script>
 </body>
 </html>
