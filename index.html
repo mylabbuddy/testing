@@ -185,10 +185,10 @@
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Get a Call Back</h3>
                         <p class="text-gray-500 text-sm mb-4">Fill the form to get the best discounted prices.</p>
                         
-                        <form class="space-y-4" action="https://sheetdb.io/api/v1/v5cqxjnouhz4n" method="post">
+                        <form id="sheetdb-form" class="space-y-4" action="https://sheetdb.io/api/v1/v5cqxjnouhz4n" method="post">
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-1">Name</label>
-                                <input type="text" name="data[NAME]" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                                <input type="text" id="uname" name="data[NAME]" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
                             </div>
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-1">Mobile Number</label>
@@ -1003,6 +1003,22 @@
         detailModal.onclick = (e) => {
             if (e.target === detailModal) closeTestModal();
         };
+    </script>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                alert('Submitted !! 😊 Thank you ' + document.getElementById('uname').value)
+                window.location.href = '';
+                location.reload();
+            });
+        });
     </script>
 </body>
 </html>
