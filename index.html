@@ -185,14 +185,14 @@
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Get a Call Back</h3>
                         <p class="text-gray-500 text-sm mb-4">Fill the form to get the best discounted prices.</p>
                         
-                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form class="space-y-4" action="https://sheetdb.io/api/v1/v5cqxjnouhz4n" method="post">
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-1">Name</label>
-                                <input type="text" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                                <input type="text" name="data[NAME]" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
                             </div>
                             <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-1">Mobile Number</label>
-                                <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
+                                <input type="number" name="data[PHONE]" placeholder="+91 XXXXX XXXXX" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-tru-blue" required>
                             </div>
                             <!-- <div>
                                 <label class="block text-gray-700 text-sm font-bold mb-1">Select Test</label>
