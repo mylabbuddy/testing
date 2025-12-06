@@ -209,6 +209,12 @@
                                 Request Call Back
                             </button>
                         </form>
+                        <div id="submissionModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-btn">&times;</span>
+                                <p id="submissionMessage"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1006,6 +1012,40 @@
     </script>
     <script>
         var form = document.getElementById('sheetdb-form');
+        var modal = document.getElementById('submissionModal');
+        var closeBtn = document.querySelector('.close-btn');
+        var submissionMessage = document.getElementById('submissionMessage');
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(response => response.json())
+                .then(html => {
+                    submissionMessage.textContent = '😊 Thank you, for Dropping a Message ! ' + document.getElementById('uname').value;
+                    modal.style.display = "flex";
+                });
+        });
+
+        // Close the modal when clicking the close button
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+            window.location.href = '';  // Optional: reload the page
+            location.reload();
+        });
+
+        // Close the modal when clicking anywhere outside the modal content
+        window.addEventListener("click", function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                window.location.href = '';  // Optional: reload the page
+                location.reload();
+            }
+        });
+    </script>
+    <!-- <script>
+        var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
             e.preventDefault();
             fetch(form.action, {
@@ -1019,6 +1059,6 @@
                 location.reload();
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>
